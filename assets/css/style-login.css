@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root { /* variables para los colores */
+    --color_text-primary: #AB29CA;
+    --color_text-secundary: #101E2C;
+    --color_text-tertiary: #485663;
+    --main_color-primary: #701687;
+    --main_color-secundary: #F4D4FB;
+    --background-color: #FAFBFE;
+    --lowText_font_size: 16px;
+    --text_size_title: 40px;
+    --text_title_card: 24px;
+    --text_title_cardv2: 20px;
+    --text_paragraph: 16px;
+    --box_shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2);
+}
+
+
+body {
+    background-color: var(--main_color-secundary);
+    transition: 0.3s ease all; /*transicion para el cambio de color*/
+    /* background-image: url(../images/Home/bg4.jpg); */
+    background-size: cover; /*se adapte al tamaño*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;/*se adapta al background*/
+}
+
+body.dark {
+    background: #111111;
+  }
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+
+/*----   C A J A   A T R A S   ----*/
+
+.caja-atras {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px); /*desenfoque*/
+    background-color: rgba(89, 7, 126, 0.695); /*opacidad*/
+}
+
+.caja-atras div {
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;/*transicion*/
+}
+
+.caja-atras div p, .caja-atras div button {
+    margin-top: 30px;
+}
+
+.caja-atras div h3 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.caja-atras div p {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.caja-atras button {
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    transition: all 300ms;
+    display: flex;
+    margin: auto;
+}
+
+.caja-atras button:hover {
+    background: #fff;
+    color: var(--color_text-secundary);
+}
+
+
+
+/*----   F O R M U L A R I O S   ----*/
+
+.container-login-registro {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.27);
+}
+
+.container-login-registro form{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.container-login-registro .formulario-login {
+    height: 480px;
+    margin-top: -50px;
+    width: 380px;
+    padding: 30px 20px;
+}
+
+.container-login-registro .formulario-login input{
+    margin-top: 30px;
+}
+
+.container-login-registro .formulario-login button{
+    margin-top: 40px;
+}
+
+.container-login-registro .formulario-registro {
+    padding: 0 20px;
+    margin-top: -50px;
+    max-height: 600px;
+}
+
+.container-login-registro form h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: var(--main_color-primary);
+}
+
+.container-login-registro form input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 13px;
+    /* outline: none; */
+}
+
+.container-login-registro form button {
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    background: var(--main_color-primary);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 0px;
+}
+
+.container-login-registro form button:hover {
+    background-color:#910db2;
+    color:#fff;
+}
+
+.formulario-registro button {
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
+}
+
+.formulario-login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario-registro {
+    display: none;
+}
+
+
+
+
+.form-control {
+    height: 95px;
+    line-height: 10px;/*Espacio entre lineas*/
+    
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	top: 20px;
+	right: 50px;
+    size: 10px;
+    padding-top: 4px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+    font-size: 10px;
+}
+
+.form-control.error small {
+	visibility: visible;
+}  
+
+
+footer {
+    position: block;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #282e3e!important;
+    color: var(--background-color);
+    padding: 2rem 0;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* E S T I L O S    M O D O    O S C U R O */
+
+body.dark .menu-nav nav ul li a{
+    color: var(--color_text-primary);
+}
+
+body.dark .menu-nav nav ul li a:hover{
+    color: var(--main_color-secundary);
+}
+
+body.dark .btn__quote{
+    color: var(--color_text-primary);
+    border: 2px solid var(--color_text-primary);
+}
+
+body.dark .btn__quote:hover{
+    color: white;
+    background: var(--main_color-primary);
+}
+
+#btn-logout {
+    display: none;
+}
+
+body.dark .bg-footer {
+    background:#547a95!important;
+}
+
+
+
+
+
+
+
+
+/* R E S P O N S I V O */
+/* 
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja-atras{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja-atras div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+
+    --- F O R M U L A R I O S --- 
+    .contenedor-login-registro{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor-login-registro form{
+        position: relative;
+    }
+}  */
