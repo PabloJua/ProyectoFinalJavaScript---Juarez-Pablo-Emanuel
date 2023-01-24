@@ -201,8 +201,7 @@ main {
 
 .form-control {
     height: 95px;
-    line-height: 10px;/*Espacio entre lineas*/
-    
+    line-height: 10px;/*Espacio entre lineas*/   
 }
 
 .form-control.success input {
@@ -242,7 +241,6 @@ main {
 .form-control.error small {
 	visibility: visible;
 }  
-
 
 footer {
     position: block;

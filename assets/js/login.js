@@ -124,6 +124,7 @@ const nombre = document.getElementById('nombre');
 const usuario = document.getElementById('usuario');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const formControl = document.querySelector('.form-control');
 
 formRegistro.addEventListener('submit', e => {
     e.preventDefault();
@@ -135,7 +136,11 @@ function checkInputs() {
     const usuarioValue = usuario.value.trim(); // trim - elimina cualquier caracter vacio, al prinicipio o al final
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
-
+    let name = false;
+    let user = false;
+    let correo = false;
+    let pass = false;
+    
 
  /* V A L I D A C I O N      N O M B R E */    
     if(nombreValue === '') {
@@ -147,6 +152,7 @@ function checkInputs() {
     } else {
         setSuccessFor(nombre, 'Nombre ingresado correctamente');
         nombre.style.border = '2px solid green';
+        name = true;
     }
 
 /* V A L I D A C I O N      U S U A R I O */ 
@@ -160,6 +166,7 @@ function checkInputs() {
     else {
         setSuccessFor(usuario, 'Usuario ingresado correctamente');
         usuario.style.border = '2px solid green';
+        user = true;
     }
 
 
@@ -173,6 +180,7 @@ function checkInputs() {
     } else {
         setSuccessFor(email, 'Email ingresado correctamente');
         email.style.border = '2px solid green';
+        correo = true;
     }
 
 
@@ -186,14 +194,18 @@ function checkInputs() {
     } else {
 		setSuccessFor(password, 'Contraseña ingresada correctamente');
         password.style.border = '2px solid green';
+        pass = true;
 	}
 
-    // swal({
-    //     title: `Bienvenid@ ${nombreValue}`,
-    //     text: 'Los datos fueron ingresados correctamente',
-    // });
+    if (name && user && correo && pass) {
+            localStorage.setItem(usuarioValue, passwordValue)
+            swal({
+                title: `Bienvenid@ ${nombreValue}`,
+                text: 'Los datos fueron registrados correctamente',
+            });
+            formRegistro.reset();
+        } else {}
 }
-
 
 
 function isNombre (nombre) {
